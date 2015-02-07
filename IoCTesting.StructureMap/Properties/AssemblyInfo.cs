@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("IoCTesting.StructureMap")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A tiny testing library for your StructureMap container.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("vgaltes.com")]
 [assembly: AssemblyProduct("IoCTesting.StructureMap")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]

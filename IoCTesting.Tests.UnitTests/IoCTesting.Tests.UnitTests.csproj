@@ -37,11 +37,6 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IoCTestingFakeContainer.cs" />
@@ -57,14 +52,6 @@
     <ProjectReference Include="..\IoCTesting.StructureMap\IoCTesting.StructureMap.csproj">
       <Project>{b94d82db-600c-40e3-b28b-4a71891449f1}</Project>
       <Name>IoCTesting.StructureMap</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\IoCTesting.Tests.StructureMap\IoCTesting.Tests.StructureMap.csproj">
-      <Project>{240cf334-8eaa-4db2-8306-f415ccd7cd9c}</Project>
-      <Name>IoCTesting.Tests.StructureMap</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\IoCTesting.Tests.Unity\IoCTesting.Tests.Unity.csproj">
-      <Project>{58efdd5d-6f41-429d-9636-05147417cf0b}</Project>
-      <Name>IoCTesting.Tests.Unity</Name>
     </ProjectReference>
     <ProjectReference Include="..\IoCTesting.Unity\IoCTesting.Unity.csproj">
       <Project>{66051c98-7c2d-407f-baa3-eafb3d1b32f7}</Project>
