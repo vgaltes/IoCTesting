@@ -2,7 +2,7 @@
 {
     using System;
     using global::StructureMap;
-    
+
     public class IoCTestingStructureMap : IoCTesting
     {
         private Maybe<IContainer> _container;
@@ -16,6 +16,11 @@
         {
             var value = _container.Do(c => c.Model.DefaultTypeFor(type));
             return new Maybe<Type>(value);
+        }
+
+        protected override void DisposeContainer()
+        {
+            _container.Do(c => c.Dispose());
         }
     }
 }

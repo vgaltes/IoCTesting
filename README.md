@@ -33,11 +33,12 @@ The only requirement in your code is that you must have a function that returns 
         });
     }
 
-The library has only one function, called CheckDependencies, that takes three parameters:
+The library has only one function, called CheckDependencies, that takes four parameters:
 
 - The full path of the assembly where the registration is performed.
 - The qualified name of the class that performs the registration.
 - The assembly you want to scan
+- The root namespace you want to scan. Types that its namespace doesn't start with it won't be scanned.
 
 It returns an IEnumerable<string> with the classes or interfaces that can not be found.
 

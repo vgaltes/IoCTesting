@@ -13,5 +13,10 @@
         {
             return new Maybe<Type>();
         }
+
+        protected override void DisposeContainer()
+        {
+            
+        }
     }
 }

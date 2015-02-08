@@ -7,12 +7,13 @@
     [TestFixture]
     public class IoCTestingTests
     {
-        const string InvalidRegistrationAssemblyFullPath = "Invalid path";
-        const string AssemblyToScanFullPath = "IoCTesting.Tests.TestingLibrary.dll";
+        private const string InvalidRegistrationAssemblyFullPath = "Invalid path";
+        private const string AssemblyToScanFullPath = "IoCTesting.Tests.TestingLibrary.dll";
         private const string ValidAssemblyName = "IoCTesting.Tests.StructureMap.dll";
-        const string InvalidAssemblyPath = "InvalidAssemblyToScan.dll";
+        private const string InvalidAssemblyPath = "InvalidAssemblyToScan.dll";
         private const string InvalidRegistrationClass = "InvalidRegistrationClassQualifiedName";
         private const string ValidRegistrationClass = "IoCTesting.Tests.StructureMap.StructureMapUserMissingConfiguration";
+        private const string NamespaceToScan = "IoCTesting.Tests";
 
 
         [Test]
@@ -21,8 +22,8 @@
         {
             var iocTesting = new IoCTestingFakeContainer();
 
-            iocTesting.CheckDependencies(InvalidRegistrationAssemblyFullPath, 
-                ValidRegistrationClass, AssemblyToScanFullPath);
+            iocTesting.CheckDependencies(InvalidRegistrationAssemblyFullPath,
+                ValidRegistrationClass, AssemblyToScanFullPath, NamespaceToScan);
         }
 
         [Test]
@@ -31,7 +32,7 @@
         {
             var iocTesting = new IoCTestingFakeContainer();
 
-            iocTesting.CheckDependencies(null, ValidRegistrationClass, AssemblyToScanFullPath);
+            iocTesting.CheckDependencies(null, ValidRegistrationClass, AssemblyToScanFullPath, NamespaceToScan);
         }
 
         [Test]
@@ -42,7 +43,7 @@
             var iocTesting = new IoCTestingFakeContainer();
             
             iocTesting.CheckDependencies(assemblyToScanFullPath,
-                InvalidRegistrationClass, assemblyToScanFullPath);
+                InvalidRegistrationClass, assemblyToScanFullPath, NamespaceToScan);
         }
 
         [Test]
@@ -53,7 +54,7 @@
             var iocTesting = new IoCTestingFakeContainer();
 
             iocTesting.CheckDependencies(assemblyToScanFullPath,
-                null, assemblyToScanFullPath);
+                null, assemblyToScanFullPath, NamespaceToScan);
         }
 
         [Test]
@@ -64,7 +65,7 @@
             var iocTesting = new IoCTestingFakeContainer();
 
             iocTesting.CheckDependencies(assemblyToScanFullPath,
-                ValidRegistrationClass, InvalidAssemblyPath);
+                ValidRegistrationClass, InvalidAssemblyPath, NamespaceToScan);
         }
 
         [Test]
@@ -75,7 +76,7 @@
             var iocTesting = new IoCTestingFakeContainer();
 
             iocTesting.CheckDependencies(assemblyToScanFullPath,
-                ValidRegistrationClass, null);
+                ValidRegistrationClass, null, NamespaceToScan);
         }
 
         private static string GetValidAssemblyToScanFullPath()

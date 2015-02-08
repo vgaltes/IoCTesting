@@ -20,5 +20,10 @@
                     _container.Apply(c => c.Registrations.FirstOrDefault(r => r.RegisteredType == type))
                         .Do(r => r.MappedToType));
         }
+
+        protected override void DisposeContainer()
+        {
+            _container.Do(c => c.Dispose());
+        }
     }
 }

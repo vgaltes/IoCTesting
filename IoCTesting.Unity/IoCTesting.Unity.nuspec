@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/vgaltes/IoCTesting</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Check if all your dependencies are registered in your Unity container</releaseNotes>
+    <releaseNotes>Registration method can be static. Only check dependencies for interfaces or abstract classes</releaseNotes>
     <copyright>Copyright 2015</copyright>
     <tags>Dependency_Injection Inversion_of_Control Testing Unity</tags>
   </metadata>
