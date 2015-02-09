@@ -68,7 +68,7 @@
             var parameters = types.Where(t => t.IsClass)
                 .SelectMany(t => t.GetConstructors())
                 .SelectMany(c => c.GetParameters())
-                .Where(p => !p.ParameterType.IsValueType && ( p.ParameterType.IsAbstract || p.ParameterType.IsInterface ) && !(p.ParameterType == typeof (Type)))
+                .Where(p => !p.ParameterType.IsValueType && p.ParameterType.IsAbstract && !(p.ParameterType == typeof (Type)))
                 .Distinct();
 
             foreach (var parameter in parameters)
